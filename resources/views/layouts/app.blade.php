@@ -19,7 +19,7 @@
         @include('partials.header')
 
         <main>
-            <div class="container">
+            {{-- <div class="container">
 
                 <div class="row">
 
@@ -39,7 +39,7 @@
 
                 </div>
 
-            </div>
+            </div> --}}
         </main>
 
         @include('partials.footer')
