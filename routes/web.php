@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $firstName = 'Gino';
-    $lastName = 'Paoli';
+
+    $comics = config('comics');
 
     /*
         compact: crea un array associativo le cui chiavi sono le stringhe
@@ -39,15 +39,14 @@ Route::get('/', function () {
     */
     // dd(compact('firstName', 'lastName'));
 
-    return view('welcome', [
-        'firstName' => $firstName,
-        'lastName' => $lastName,
+    return view('characters', [
+        'comics' => $comics
     ]);
     // return view('welcome', compact('firstName', 'lastName'));
 });
 
-Route::get('/chi-siamo', function () {
-    return view('subpages.about');
+Route::get('/comics', function () {
+    return view('subpages.comics');
 });
 
 // Route::get(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)
