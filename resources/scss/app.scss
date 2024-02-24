@@ -16,10 +16,13 @@ header{
         font-size: small; 
         font-weight: bold;
         cursor: pointer;
-        color: black;
     
         a{
             text-decoration: none;
+            color: black;
+        }
+
+        .active{
             color: #0282F9;
         }
     }

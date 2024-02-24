@@ -84,11 +84,11 @@
                     @foreach ($links as $link)
                         <li>
                             @if ($link['active'])
-                                <a href="{{ $link['url'] }}">
+                                <a href="{{ $link['url'] }}" class="active">
                                     {{ $link['label'] }}
                                 </a>
                             @else
-                                <a>
+                                <a href="{{ $link['url'] }}">
                                     {{ $link['label'] }}
                                 </a>
                             @endif
